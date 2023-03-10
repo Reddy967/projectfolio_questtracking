@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Entry</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav  class="navbar navbar-inverse" style="background-color:MediumAquamarine;">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand" style="color:Maroon" href="#">Project Details</a>
+                                  </div>
+                                </div>
+</nav>
+<div>
+<form method="post" class="form form-responsive">
+    {% csrf_token %}
+<div class="container mt-3">
+    <div class="dropdown">
+        <label>Domain</label><br>
+        <select  name="domain" class="custom-select dropdown-toggle" data-ds-toggle="dropdown"style="width:150px;">
+        <option class="disabled">--------</option>
+        <option>IT</option>
+        <option>Electronic</option>
+        <option>Bank</option>
+        <option>Other</option>
+        </select>
+    </div>
+</div><br>
+<div class="container mt-3">
+    <table>
+        <tr>
+            <td>
+                <label>Title</label>
+            </td>
+            <td>
+                <input type="text" name="title">
+            </td>
+        </tr>
+    </table>
+</div><br>
+<div class="container mt-3">
+    <table>
+        <tr>
+            <td>
+                <label>StartDate</label>
+            </td>
+            <td>
+                <input type="date" name="startdate">
+            </td>
+        </tr>
+    </table>
+</div><br>
+<div class="container mt-3">
+    <table>
+        <tr>
+            <td>
+                <label>EndDate</label>
+            </td>
+            <td>
+                <input type="date" name="enddate">
+            </td>
+        </tr>
+    </table>
+</div><br>
+<div class="container mt-3">
+    <div class="dropdown">
+        <label>Batch</label><br>
+        <select name="batch" class="custom-select dropdown-toggle" data-ds-toggle="dropdown"style="width:150px;">
+        <option class="disabled">--------</option>
+        <option>Team</option>
+        <option>Individual</option>
+        <option>Other</option>
+    </select>
+    </div>
+</div><br>
+<div class="container mt-3">
+    <div class="dropdown">
+        <label>Priority</label><br>
+        <select name="priority" class="custom-select dropdown-toggle" data-ds-toggle="dropdown"style="width:150px;">
+        <option class="disabled">--------</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>VeryHigh</option>
+    </select>
+    </div>
+</div><br>
+<div class="container mt-3">
+    <tr>
+        <td>
+            <input type="submit" value="ADD">
+        </td>
+    </tr>
+</div>
+</form>
+</div>
+</body>
+</html>

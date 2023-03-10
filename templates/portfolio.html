@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'projectfolio/custom.css' %}">
+</head>
+<body class="bg-black">
+<nav  class="navbar navbar-inverse" style="background-color:MediumAquamarine;">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand" style="color:blue" href="#">Portfolio</a>
+                                  </div>
+                                </div>
+</nav>
+<div class="img-fluid masthead color-overlay" style="background-image: url({% static 'projectfolio/images/port.png' %});">
+<div class="container sm-3">
+  <h2 style="color:DarkRed">Reports</h2>
+  <a href="/entrypage" class="btn btn-info">Project Entry</a>
+  <a href="/tasks" class="btn btn-warning">Tasks</a>
+  <a href="/projectstatus" class="btn btn-danger">ProjectStatus Entry </a>
+  <a href="/workload" class="btn btn-info">Workload</a>
+    <a href="/teamsentry" class="btn btn-primary">TeamsEntry</a>
+
+</div>
+</div>
+</body>
+</html>

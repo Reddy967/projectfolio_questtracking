@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 align="center" style="color:skyblue">Project Report</h1>
+<center>
+  <div class="container mt-3">
+  <table class="table table-bordered">
+    <tr>
+      <th>Projectname</th>
+      <th>Teamname</th>
+      <th>Analysis</th>
+      <th>Design</th>
+      <th>Development</th>
+      <th>Testing</th>
+      <th>Documentation</th>
+      <th>Action</th>
+    </tr>
+    {% for i in value %}
+    <tr>
+      <td>{{i.Projectname}}</td>
+      <td>{{i.Teamname}}</td>
+      <td>{{i.Analysis}}</td>
+      <td>{{i.Design}}</td>
+      <td>{{i.Development}}</td>
+      <td>{{i.Testing}}</td>
+      <td>{{i.Documentation}}</td>
+      <td>
+        <a href="/projectreport_delete/{{i.id}}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+    </div>
+  <br>
+  <br>
+  {% if a %}
+  <form method="post">
+    <div class="container mt-3">
+    <table class="table table-bordered">
+      <tr>
+        <td>
+          <label>Project Name</label>
+        </td>
+        <td>
+          {{a.Projectname}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Team Name</label>
+        </td>
+        <td>
+          {{a.Teamname}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Analysis</label>
+        </td>
+        <td>
+          {{a.Analysis}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Design</label>
+        </td>
+        <td>
+          {{a.Design}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Development</label>
+        </td>
+        <td>
+          {{a.Development}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Testing</label>
+        </td>
+        <td>
+          {{a.Testing}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Documentation</label>
+        </td>
+        <td>
+          {{a.Documentation}}
+        </td>
+      </tr>
+    </table>
+    </div>
+  </form>
+  {% endif %}
+</center>
+</body>
+</html>

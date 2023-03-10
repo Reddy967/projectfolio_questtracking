@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'projectfolio/admin.css' %}">
+<body>
+<nav  class="navbar navbar-inverse" style="background-color:LightCyan">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand" style="color:Red" href="#">Admin page</a>
+                                  </div>
+                                </div>
+</nav>
+  <div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form method="post" >
+                {% csrf_token %}
+				<h4 style="color:Blue">Admin</h4>
+				<div class="login__field">
+                    <label><b style="color:Blue">Username :</b></label><br>
+					<i class="login__icon fa fa-user"></i>
+					<input type="text" name="username" placeholder="Username ">
+				</div>
+				<div class="login__field">
+					<label><b style="color:Blue">Password :</b></label><br>
+					<i class="login__icon fa fa-lock"></i>
+					<input type="password" name="password" placeholder="Password">
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Log In Now</span>
+					<i class="button__icon fa fa-chevron-right"></i>
+				</button><br>
+			</form>
+			<div class="social-login">
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fa fa-instagram"></a>
+					<a href="#" class="social-login__icon fa fa-facebook"></a>
+					<a href="#" class="social-login__icon fa fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

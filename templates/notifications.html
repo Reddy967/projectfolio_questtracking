@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 align="center" style="color:skyblue">Notifications</h1>
+<center>
+  <div class="container mt-3">
+  <table class="table table-bordered">
+    <tr>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Description</th>
+      <th>Created At</th>
+      <th>Action</th>
+    </tr>
+    {% for i in value %}
+    <tr>
+      <td>{{i.Email}}</td>
+      <td>{{i.Subject}}</td>
+      <td>{{i.Description}}</td>
+      <td>{{i.Created}}</td>
+      <td>
+        <a href="/notifications_delete/{{i.id}}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+    </div>
+  <br>
+  <br>
+  {% if a %}
+  <form method="post">
+    <div class="container mt-3">
+    <table class="table table-bordered">
+      <tr>
+        <td>
+          <label>Email</label>
+        </td>
+        <td>
+          {{a.Email}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Subject</label>
+        </td>
+        <td>
+          {{a.Subject}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Description</label>
+        </td>
+        <td>
+          {{a.Description}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Created</label>
+        </td>
+        <td>
+          {{a.Created}}
+        </td>
+      </tr>
+    </table>
+    </div>
+  </form>
+  {% endif %}
+</center>
+</body>
+</html>

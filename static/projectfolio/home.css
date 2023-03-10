@@ -1,0 +1,30 @@
+.masthead {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+h5 {
+ font-size: 2rem;
+}
+.color-overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+
+
+}
+
+@media (max-width: 1200px) {
+   .masthead {
+      min-height: 30vh;
+   }
+   h5 {
+       font-size: calc(1.25rem + 1.3vm);
+   }
+}
+@media (min-width: 400px) {
+   h5 {
+       font-size: calc(0.5rem + 0.5vm);
+   }
+   }

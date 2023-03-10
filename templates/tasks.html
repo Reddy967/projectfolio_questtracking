@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav  class="navbar navbar-inverse" style="background-color:MediumAquamarine;">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <h3 style="color:green">Tasks</h3>
+                                  </div>
+                                </div>
+</nav>
+<form method="post" class="form form-responsive">
+    {% csrf_token %}
+    <div class="container mt-3">
+        <table>
+            <tr>
+                <td>
+                    <label>TeamName :</label>
+                </td>
+                <td>
+                    <input type="text" name="teamname">
+                </td>
+            </tr>
+        </table>
+    </div><br>
+    <div class="container mt-3">
+        <table>
+            <tr>
+                <td>
+                    <label>ProjectName :</label>
+                </td>
+                <td>
+                    <input type="text" name="projectname">
+                </td>
+            </tr>
+        </table>
+    </div><br>
+    <div class="container mt-3">
+       <label>Progress Tasks :</label><br>
+        <input type="checkbox" name="progresstasks" value="NotStarted"> NotStarted<br>
+        <input type="checkbox" name="progresstasks" value="To Do"> To Do<br>
+        <input type="checkbox" name="progresstasks" value="Doing"> Doing<br>
+        <input type="checkbox" name="progresstasks" value="Done"> Done<br>
+    </div><br>
+    <div class="container mt-3">
+        <label>Description :</label><br>
+        <input type="text" name="description">
+    </div><br>
+    <div class="container mt-3">
+        <label>Tasks :</label><br>
+        <input type="checkbox" name="tasks" value="Overdue this day"> Overdue this day<br>
+        <input type="checkbox" name="tasks" value="Overdue this week"> Overdue this week<br>
+        <input type="checkbox" name="tasks" value="Overdue this month"> Overdue this month<br>
+        <input type="checkbox" name="tasks" value="Completed"> Completed<br>
+    </div><br>
+    <div class="container mt-3" style="color:red">
+        <input type="submit" value="ADD">
+    </div>
+</form>
+</body>
+</html>

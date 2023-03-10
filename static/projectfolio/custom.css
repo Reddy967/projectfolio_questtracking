@@ -1,0 +1,19 @@
+.masthead {
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.color-overlay {
+     position: absolute;
+     width: 100%;
+     height: auto;
+
+}
+@media (min-width: 576px) {
+ .responsive
+}
+.responsive-img {
+     width: 100%;
+     height: auto;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h1 align="center" style="color:skyblue">Project details</h1>
+<center>
+  <div class="container mt-3">
+  <table class="table table-bordered">
+    <tr>
+      <th>Domain</th>
+      <th>Title</th>
+      <th>Startdate</th>
+      <th>Enddate</th>
+      <th>Batch</th>
+      <th>Priority</th>
+      <th>Action</th>
+    </tr>
+    {% for i in value %}
+    <tr>
+      <td>{{i.Domain}}</td>
+      <td>{{i.Title}}</td>
+      <td>{{i.Startdate}}</td>
+      <td>{{i.Enddate}}</td>
+      <td>{{i.Batch}}</td>
+      <td>{{i.Priority}}</td>
+      <td>
+        <a href="/projectdetails_delete/{{i.id}}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+    </div>
+  <br>
+  <br>
+  {% if a %}
+  <form method="post">
+    <div class="container mt-3">
+    <table class="table table-bordered">
+      <tr>
+        <td>
+          <label>Domain</label>
+        </td>
+        <td>
+          {{a.Domain}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Title</label>
+        </td>
+        <td>
+          {{a.Title}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Startdate</label>
+        </td>
+        <td>
+          {{a.Startdate}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Enddate</label>
+        </td>
+        <td>
+          {{a.Enddate}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Batch</label>
+        </td>
+        <td>
+          {{a.Batch}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Priority</label>
+        </td>
+        <td>
+          {{a.Priority}}
+        </td>
+      </tr>
+    </table>
+    </div>
+  </form>
+  {% endif %}
+</center>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tickets</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'projectfolio/custom.css' %}">
+</head>
+<body class="bg-black">
+<nav  class="navbar navbar-inverse" style="background-color:Teal;">
+                                <div class="container-fluid">
+                                  <div class="navbar-header">
+                                    <a class="navbar-brand" style="color:Brown" href="#">Tickets</a>
+                                  </div>
+                                </div>
+</nav>
+<form method="post">
+    {% csrf_token %}
+    <div class="table-responsive-sm masthead color-overlay bgimg-fluid" style="background-image: url({% static 'projectfolio/images/contact.png' %});">
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <label><b style="color:LightSeaGreen">Email :</b></label>
+                </div><br>
+            </td>
+            <td>
+                <div>
+                    <input type="text" name="email">
+                </div><br>
+            </td>
+        </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label><b style="color:LightSeaGreen">Subject :</b></label>
+                    </div><br>
+                </td>
+                <td>
+                    <div>
+                    <input type="text" name="subject">
+                    </div><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label><b style="color:LightSeaGreen">Description :</b></label>
+                    </div><br>
+                </td>
+                <td>
+                    <div>
+                    <input type="text" name="description" style="width:120%;height:50px;">
+                    </div><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <label><b style="color:LightSeaGreen">Created :</b></label>
+                    </div><br>
+                </td>
+                <td>
+                    <div>
+                    <input type="datetime-local" name="created">
+                    </div><br>
+                </td>
+            </tr>
+    </table>
+    </div>
+    <div style="position:absolute; left:150px; top:300px">
+        <input type="submit" value="Submit">
+    </div>
+
+</form>
+</body>
+</html>
