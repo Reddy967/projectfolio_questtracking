@@ -3,9 +3,11 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('', views.registerpage),
-    path('userlogin/', views.userlogin),
-    path('homepage/', views.homepage, name='home'),
+    path('',views.home,name='home'),
+    path('home/',views.home,name='register'),
+    path('home/',views.home,name='login'),
+    path('registerpage/', views.registerpage,name='register'),
+    path('userlogin/', views.userlogin,name='login'),
     path('homepage/', views.homepage, name='profile'),
     path('homepage/', views.homepage, name='notifications'),
     path('homepage/', views.homepage, name='teams'),
@@ -34,6 +36,5 @@ urlpatterns = [
     path('teams_delete/<int:id>/',views.teams_delete,name='teams_delete'),
     path('notifications/',views.notifications,name='notifications'),
     path('notifications_delete/<int:id>/',views.notifications_delete,name='notifications_delete'),
-    path('home/',views.home,name='home'),
     path('access/',views.access,name='access'),
 ]
